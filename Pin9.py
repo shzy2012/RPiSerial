@@ -1,6 +1,7 @@
 #import
 import RPi.GPIO  as gio
 import time
+import sys
 
 # golbal  define
 
@@ -15,6 +16,9 @@ def led_ini():
     
 def led_start():
     while True:
+        print 'exit...'
+        if input()=='exit':
+            sys.exit(0)
         for port led_port_list:
             gpio.output(port,True)
             time.sleep(0.1)
@@ -26,7 +30,9 @@ def led_start():
 #Main
 
 if __name__ == '__main__':
+    print 'init ....'
     led_init()
+    print 'start .....'
     led_start()
 
 
