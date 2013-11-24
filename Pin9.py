@@ -22,7 +22,9 @@ def led_start():
             gpio.output(port,True)
             time.sleep(0.1)
             gpio.output(port,False)
-
+def close():
+    gpio.cleanup()
+    print 'eixt ...........'
 #define  def  -----End
 
 
