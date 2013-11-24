@@ -17,6 +17,7 @@ def led_init():
 def led_start():
     while True:
         if raw_input("Please enter \r\n")=='exit':
+            close()
             sys.exit(0)
         for port in led_port_list:
             gpio.output(port,True)
